@@ -98,62 +98,9 @@ El servidor API arrancará en `http://localhost:8000`. Accede a las siguientes r
 - **Git** es un sistema de control de versiones que te permite llevar un historial de los cambios en tu código y colaborar con otros desarrolladores.
 - **GitHub** es una plataforma de alojamiento en la nube de código que utiliza Git para gestionar los repositorios y sus versiones. Ampliamente utilizado como curriculum para mostrar tus proyectos a futuros empleadores.
 
-### 3.1. Git
-
-Asegurate de estar en la raíz del proyecto (NO en la carpeta `./src`).
-
-Primero crea un archivo llamado `.gitignore` donde indicarémos que archivos o carpetas no vamos a guardar. Como son las librerías externas que podemos descargar.
-
-```
-venv-api/
-```
-
-Y ejecuta los siguientes comandos:
-
-```bash
-git init
-```
-
-`git init` inicializa un nuevo repositorio Git en tu proyecto. Solo se hace la primera vez. Crea la carpeta `.git` donde se guardarán todas tus versiones. Ejecuta `ls --all` para listar todas las carpetas, incluyendo los ocultos que empiezan por punto '.'
-
-Ahora ejecuta `git status` para ver el estado de tus archivos. Hay 3 estados [enlace](https://velog.velcdn.com/images/silvercastle/post/e168e7f9-74aa-4c65-aeea-8216a19dabc8/image.png):
-| Working Directory | staging | committed |
-| --- | --- | --- |
-| El archivo no está siendo trackeado por git. | El archivo está listo para ser committeado. | Guardado en el historial de versiones. |
-
-`git add .` añade todos los archivos de la carpeta actual `.` al staging area, es decir, los prepara para ser committeados/guardados. Y revisa con `git status`.
-
-```bash
-git add .
-```
-
-Si son los archivos deseados, commitea/guarda la version actual con un mensaje descriptivo con el siguiente comando:
-
-```bash
-git commit -m "Initial commit"
-```
-
-Revisa con `git status` y mira el historial de versiones con:
-
-```bash
-git --no-pager log --oneline --graph --all --decorate
-```
-
-### 3.2. GitHub
-
 Súbelo a github. Para ello primera crea un nuevo repositorio en GitHub con un nombre y configuración por defecto.
 
-Luego vincula tu repositorio local con el remoto de GitHub (origin):
-
-```bash
-git remote add origin https://github.com/<your-username>/<your-repo-name>.git
-```
-
-Finalmente sube los cambios (upload) a origin (GitHub) de tu local (main):
-
-```bash
-git push -u origin main
-```
+En lugar de hacerlo con git (profesional), lo haremos con la interfaz gráfica de GitHub (novato). Simplemente arrastra todos los archivos y carpetas (menos venv-api).
 
 ## 4. Despliegue en la nube
 
